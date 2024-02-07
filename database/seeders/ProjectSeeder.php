@@ -15,10 +15,12 @@ class ProjectSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
+        for($i = 0; $i < 10; $i++){
         $project = new Project();
         $project->title = $faker->sentence(5);
         $project->content = $faker->text();
         $project->slug = Str::of($project->title)->slug('-');
+        }
 
         $project->save();
     }

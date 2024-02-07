@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="">
-    <div class="container py-5">
+    <div class="container py-5 mb-5">
         <div class="">
             <img src="{{ asset('img/logo.png') }} " class="img-fluid" alt="description of myimage">
         </div>
@@ -10,7 +10,7 @@
             Welcome to Knight Project Management
         </h1>
 
-        <p class="col-md-8 fs-4 text-warning"></p>
+        <p class="col-md-8 fs-4 text-warning">Welcome to KPM, where meticulous planning meets seamless execution. As a premier project management firm, we specialize in turning your vision into reality, navigating complexities with precision, and delivering results that exceed expectations. Explore our comprehensive suite of services tailored to optimize efficiency, mitigate risks, and drive success across every project phase.</p>
         
     </div>
 </div>

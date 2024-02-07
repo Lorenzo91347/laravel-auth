@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
+    <div class="container bg-dark">
         <div class="row justify-content-center">
             <div class="col-md-8 mt-4">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card bg-black">
+                    <div class="card-header text-warning">{{ __('Dashboard') }}</div>
 
-                    <div class="card-body">
+                    <div class="card-body text-warning">
                         @if (session('status'))
-                            <div class="alert alert-success" role="alert">
+                            <div class="alert alert-success " role="alert">
                                 {{ session('status') }}
                             </div>
                         @endif

@@ -23,11 +23,11 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-dark  shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-black border-bottom border-warning  shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
-                        <img src="{{ asset('img/logonav.png') }} " class="img-fluid" alt="description of myimage">
+                        <img src="{{ asset('img/logonav.png') }} " class="img-fluid border border-warning border-4" alt="description of myimage">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
@@ -42,32 +42,32 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
+                            <a class="nav-link text-warning" href="{{ url('/') }}">{{ __('Home') }}</a>
                         </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto text-warning">
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-warning" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-warning" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-warning" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                   Welcome,{{ Auth::user()->name }}
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('admin') }}">{{ __('Dashboard') }}</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-right bg-black" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-warning" href="{{ url('admin') }}">{{ __('Dashboard') }}</a>
+                                    <a class="dropdown-item text-warning" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
