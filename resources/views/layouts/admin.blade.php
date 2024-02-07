@@ -28,7 +28,7 @@
 
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow border-bottom border-warning">
             <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-warning" href="/">KPM</a>
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-warning" href="/"><i class="fa-solid fa-chess-knight"></i>KPM</a>
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -69,6 +69,14 @@
                                     <i class="fa-solid fa-file-lines fa-lg fa-fw "></i> Projects
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning {{ Route::currentRouteName() == 'dashboard' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.projects.create') }}">
+                                    <i class="fa-brands fa-creative-commons-share fa-lg fa-fw"></i> Create New
+                                </a>
+                            </li>
+
+
                         </ul>
 
 
