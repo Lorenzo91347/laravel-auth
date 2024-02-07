@@ -9,11 +9,11 @@
         @method('PUT')
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label text-warning">Project Name</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('title')}}">
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$project->title}}">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label text-warning">Description</label>
-      <textarea class="form-control " name="description" id="" cols="30" rows="10">{{old('description' )}}</textarea>
+      <textarea class="form-control " name="description" id="" cols="30" rows="10">{{$project->description}}</textarea>
     </div>
     <button type="submit" class="btn btn-warning">Submit</button>
   </form>
